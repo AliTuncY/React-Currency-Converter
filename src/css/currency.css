@@ -1,0 +1,123 @@
+.currency-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+}
+
+
+.currency-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+
+.currency-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.amount-input,
+.result-input {
+    width: 120px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline-color: #4caf50;
+    transition: 0.2s ease;
+}
+
+.amount-input:focus,
+.result-input:focus {
+    border-color: #4caf50;
+}
+
+.currency-select {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    outline-color: #4caf50;
+}
+
+.currency-title {
+    background: linear-gradient(90deg, #00bfa5, #1de9b6);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.arrow-icon {
+    font-size: 28px;
+    color: #4caf50;
+}
+.exchange-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #00bfa5, #1de9b6);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0, 191, 165, 0.3);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.exchange-button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(120deg, #ffffff33, #ffffff00);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.exchange-button:hover::before {
+  transform: translateX(100%);
+}
+
+.exchange-button:hover {
+  box-shadow: 0 10px 20px rgba(0, 191, 165, 0.5);
+  transform: translateY(-2px);
+}
+
+.exchange-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 6px 12px rgba(0, 191, 165, 0.4);
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .currency-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .arrow-icon {
+        transform: rotate(90deg);
+    }
+}
+
